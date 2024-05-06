@@ -24,7 +24,7 @@ export const HomeNavigation = () => {
 export const GetProjectNavigation = () => {
   const navigate = useNavigate();
   return (
-    <nav className="flex gap-[16px] items-center">
+    <nav className="flex gap-[16px] py-[32px] px-[52px] items-center">
       <Button variant={'outlined'} size={'icon'} onClick={() => navigate('/')}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
