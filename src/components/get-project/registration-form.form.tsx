@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '../ui/button';
@@ -14,6 +15,7 @@ import {
   type RegistrationFormType
 } from './registration-form.validation';
 export default function RegistrationForm() {
+  const navigate = useNavigate();
   const form = useForm<RegistrationFormType>({
     resolver: zodResolver(RegistrationFormSchema),
     defaultValues: {
@@ -22,7 +24,9 @@ export default function RegistrationForm() {
     }
   });
   const formState = form.formState;
-  const onSubmit = () => {};
+  const onSubmit = () => {
+    navigate('/success');
+  };
   return (
     <Form {...form}>
       <form
