@@ -10,7 +10,7 @@ To run this app locally, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   https://github.com/masterghost2002/thence
+   git clone https://github.com/masterghost2002/thence
    cd thence
    ```
 2. **Install Dependencies:**
