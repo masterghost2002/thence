@@ -26,7 +26,7 @@ export default function HomePage() {
       <div className="flex gap-[106px] pt-[112px] pb-[148px] px-[62px]">
         <Metric />
         <div className="flex   flex-col justify-between gap-[130px]">
-          <div className="absolute right-[0]">
+          <div className="absolute right-[0] z-[-1]">
             <img src={Rectangles} />
           </div>
           <FeatureCarousel />
