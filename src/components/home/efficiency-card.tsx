@@ -1,7 +1,7 @@
 export default function EfficiencyCard() {
   return (
     <div
-      className="absolute cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out top-[110px] bg-white flex flex-col p-[30px] w-[268px] rounded-[28px]"
+      className="absolute cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out top-[146px] bg-white flex flex-col p-[30px] w-[268px] rounded-[28px]"
       style={{ boxShadow: '0px 22.59px 36.14px 0px #1E1E1E17' }}
     >
       <div className="relative">

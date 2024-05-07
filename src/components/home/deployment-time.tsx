@@ -1,7 +1,7 @@
 export default function DemploymentTime() {
   return (
     <div
-      className="absolute cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out items-center  top-[410px] gap-[14px] left-[74px] bg-white flex  px-[16px] py-[16px] w-[246px] rounded-[112px]"
+      className="absolute cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out items-center  top-[460px] gap-[14px] left-[82px] bg-white flex  px-[16px] py-[16px] w-[246px] rounded-[112px]"
       style={{ boxShadow: '0px 22.59px 36.14px 0px #1E1E1E17' }}
     >
       <div>
