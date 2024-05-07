@@ -14,7 +14,9 @@ import {
   RegistrationFormSchema,
   type RegistrationFormType
 } from './registration-form.validation';
+import { useState } from 'react';
 export default function RegistrationForm() {
+  const [isDisabled, setIsDisabled] = useState(true);
   const navigate = useNavigate();
   const form = useForm<RegistrationFormType>({
     resolver: zodResolver(RegistrationFormSchema),
@@ -23,7 +25,14 @@ export default function RegistrationForm() {
       email: ''
     }
   });
-  const formState = form.formState;
+  form.watch((data) => {
+    let allFilled = true;
+    for (const key in data as RegistrationFormType) {
+      const value = data[key as keyof RegistrationFormType];
+      if (!value || value.trim().length === 0) allFilled = false;
+    }
+    setIsDisabled(!allFilled);
+  });
   const onSubmit = () => {
     navigate('/success');
   };
@@ -31,36 +40,38 @@ export default function RegistrationForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 w-full h-auto"
+        className="space-y-[47px] w-[418px] h-auto"
       >
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input placeholder="Enter your name" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input placeholder="Enter you email" type="text" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <div className="space-y-[24px]">
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input placeholder="Enter your name" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input placeholder="Enter you email" type="text" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
         <Button
           type="submit"
           className="w-full"
-          disabled={!formState.isValid}
+          disabled={isDisabled}
           variant={'filled'}
           size={'lg'}
         >
