@@ -1,7 +1,7 @@
 export default function ExpenseEfficiencyCard() {
   return (
     <div
-      className="absolute top-[374px] text-white left-[428px] bg-[#002E18] flex flex-col pt-[34px] pr-[30px] pb-[40px] pl-[36px] w-[290px] rounded-[28px]"
+      className="absolute cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out top-[374px] text-white left-[428px] bg-[#002E18] flex flex-col pt-[34px] pr-[30px] pb-[40px] pl-[36px] w-[290px] rounded-[28px]"
       style={{ boxShadow: '0px 23.63px 37.81px 0px #1E1E1E17' }}
     >
       <div className="flex gap-[11px]">
