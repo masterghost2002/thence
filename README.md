@@ -10,8 +10,8 @@ To run this app locally, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your_username/react-vite-app.git
-   cd react-vite-app
+   https://github.com/masterghost2002/thence
+   cd thence
    ```
 2. **Install Dependencies:**
    ```bash
@@ -30,13 +30,13 @@ To run this app locally, follow these steps:
 1. **Build the Docker Image:**
 
    ```bash
-   docker build -t react-vite-app
+   docker build -t thence-web
 
    ```
 
 2. **Run the Docker Container**
    ```bash
-   docker run -d -p 8080:80 react-vite-app
+   docker run -d -p 8080:80 thence-web
    ```
 
 ## Testing Using Offical Docker File
@@ -52,5 +52,5 @@ To run this app locally, follow these steps:
 
 2. **Run the Docker Container**
    ```bash
-   docker run -d -p 8080:80 rakeshdhariwal657/thence-app
+   docker run -d -p 8080:80 rakeshdhariwal657/thence-web
    ```
