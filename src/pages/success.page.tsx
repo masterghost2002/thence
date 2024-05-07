@@ -4,7 +4,7 @@ export default function SuccessPage() {
   const navigate = useNavigate();
   const remainingTime = useTimer(() => navigate('/'), 5);
   return (
-    <div className="h-full  flex flex-col ">
+    <div className="flex-1 flex flex-col ">
       <div className="flex flex-col flex-1 items-center justify-center">
         <div className="flex flex-col   w-[718px] text-center items-center gap-[25px]">
           <svg
