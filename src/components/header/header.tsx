@@ -11,8 +11,10 @@ const HomeHeader = () => {
 };
 const GetProjectHeader = () => {
   return (
-    <header className="flex justify-between items-center">
-      <img src={Logo} className="py-[32px] px-[52px]" />
+    <header className="flex">
+      <div className="px-[52px] py-[32px] flex-1">
+        <img src={Logo} />
+      </div>
       <GetProjectNavigation />
     </header>
   );
